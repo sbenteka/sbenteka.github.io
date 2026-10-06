@@ -1,13 +1,269 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Seifeddine Ben Tekaya</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #f7f9fb;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .name {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      background: white;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      margin: 0 0 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero .tagline {
+      font-size: 1.2rem;
+      max-width: 850px;
+      color: #475569;
+      margin-bottom: 18px;
+    }
+
+    .hero .mission {
+      font-size: 1.05rem;
+      max-width: 760px;
+      color: #64748b;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      color: #52606d;
+    }
+
+    .highlight {
+      background: #eef4f8;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Seifeddine Ben Tekaya</h1>
-  <p>Microbial Ecologist | Microbiologist | Extremophile & Space Biology | Symbiosis | Bioinformatics | Data Science</p>
-  <p>Studying life at environmental extremes through microbial ecology, genomics, and comparative stress biology.</p>
-  <p>Website under construction</p>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="name">Seifeddine Ben Tekaya</div>
+
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#selected-work">Selected Work</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Seifeddine Ben Tekaya</h1>
+
+      <p class="tagline">
+        Microbial Ecologist | Microbiologist | Extremophile &amp; Space Biology |
+        Symbiosis | Bioinformatics | Data Science
+      </p>
+
+      <p class="mission">
+        Studying life at environmental extremes through microbial ecology,
+        genomics, transcriptomics, symbiosis, and comparative stress biology.
+      </p>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="container">
+      <h2>Research</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Extremophile Microbiology</h3>
+          <p>
+            Investigating microorganisms adapted to extreme environments,
+            with a focus on taxonomy, physiology, genomics, stress tolerance,
+            and ecological function.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Space Biology</h3>
+          <p>
+            Studying how tardigrades respond to acute and multigenerational
+            spaceflight using transcriptomics and functional testing of
+            stress-associated genes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Microbial Symbiosis</h3>
+          <p>
+            Exploring host-associated microbial systems, including
+            Frankia-actinorhizal symbioses and mechanisms shaping microbial
+            abundance, host selection, and adaptation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Bioinformatics &amp; Data Science</h3>
+          <p>
+            Applying RNA-seq, genome analysis, statistical modeling,
+            visualization, and computational workflows to biological questions
+            across microbial and stress-biology systems.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="selected-work" class="highlight">
+    <div class="container">
+      <h2>Selected Work</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Tardigrade Spaceflight Biology</h3>
+          <p>
+            Transcriptomic analysis of Hypsibius exemplaris after 7 and 61 days
+            aboard the International Space Station, together with functional
+            testing of tardigrade genes in human cells.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Wyoming Red Desert Microbiology</h3>
+          <p>
+            Genomic, physiological, and taxonomic characterization of novel
+            bacterial isolates recovered from extreme rock-surface environments.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Frankia Symbiosis</h3>
+          <p>
+            Research on the ecology, abundance, host selection, and molecular
+            biology of nitrogen-fixing Frankia associated with actinorhizal plants.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+
+      <div class="card">
+        <p>
+          I am a biologist working at the intersection of microbial ecology,
+          genomics, extremophile biology, symbiosis, and computational biology.
+          My research focuses on understanding how organisms survive,
+          interact, and adapt under challenging environmental conditions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Seifeddine Ben Tekaya
+  </div>
+</footer>
+
 </body>
 </html>
