@@ -10,7 +10,6 @@
         content="Seifeddine Ben Tekaya is a microbial ecologist and microbiologist studying extremophile biology, symbiosis, genomics, bioinformatics, and space biology.">
 
   <style>
-
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
@@ -78,16 +77,16 @@
 
     .hero-layout {
       display: grid;
-      grid-template-columns: 1.5fr 0.65fr;
+      grid-template-columns: 1.65fr 0.6fr;
       align-items: center;
-      gap: 70px;
+      gap: 55px;
     }
 
     .hero h1 {
       margin: 0 0 18px;
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
+      font-size: clamp(2.7rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
       color: #111827;
     }
 
@@ -142,7 +141,7 @@
 
     .profile-photo {
       width: 100%;
-      max-width: 310px;
+      max-width: 300px;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       border-radius: 50%;
@@ -182,8 +181,17 @@
 
     .about-text {
       font-size: 1.08rem;
-      max-width: 850px;
+      max-width: 920px;
       color: #3f4d5a;
+    }
+
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
     }
 
     /* RESEARCH */
@@ -286,10 +294,17 @@
       font-size: 0.9rem;
     }
 
+    /* DESKTOP */
+
+    @media (min-width: 801px) {
+      .hero h1 {
+        white-space: nowrap;
+      }
+    }
+
     /* MOBILE */
 
     @media (max-width: 800px) {
-
       .hero-layout {
         grid-template-columns: 1fr;
         text-align: center;
@@ -327,10 +342,8 @@
         align-items: flex-start;
       }
     }
-
   </style>
 </head>
-
 
 <body>
 
@@ -354,7 +367,6 @@
   </div>
 </header>
 
-
 <main>
 
   <!-- HOME -->
@@ -365,7 +377,7 @@
 
       <div>
 
-        <h1>Seifeddine<br>Ben Tekaya</h1>
+        <h1>Seifeddine Ben Tekaya</h1>
 
         <p class="tagline">
           Microbial Ecologist | Microbiologist | Extremophile &amp; Space Biology |
@@ -394,7 +406,6 @@
 
       </div>
 
-
       <div class="hero-photo">
 
         <img
@@ -407,7 +418,6 @@
     </div>
 
   </section>
-
 
   <!-- ABOUT -->
 
@@ -422,16 +432,41 @@
       <div class="about-text">
 
         <p>
-          I am a biologist working at the intersection of microbial ecology,
-          microbiology, genomics, extremophile biology, symbiosis, and
-          computational biology.
+          I am a microbial ecologist and microbiologist interested in how microorganisms
+          and other biological systems survive, interact, and adapt under challenging
+          environmental conditions. My research spans microbial ecology, environmental
+          genomics, extremophile biology, symbiosis, and space biology, with a particular
+          interest in the biological mechanisms that enable life to persist at
+          environmental limits.
         </p>
 
         <p>
-          My research examines how organisms survive, interact, and adapt under
-          challenging environmental conditions, spanning microbial systems,
-          host-associated symbioses, extreme terrestrial environments, and
-          space biology.
+          A major focus of my work has been microorganisms from arid,
+          nutrient-limited, rocky, saline, and otherwise stressful habitats.
+          I combine cultivation, physiological characterization, genomics, and
+          comparative analysis to investigate microbial diversity, adaptation,
+          and the genetic traits associated with environmental resilience.
+          My work on plant-associated systems has also examined how microbial
+          abundance, diversity, and host selection shape nitrogen-fixing
+          Frankia-actinorhizal symbioses.
+        </p>
+
+        <p>
+          Computational biology is an integral part of my research. I routinely
+          work with genomic, transcriptomic, metagenomic, and other high-dimensional
+          biological datasets, using reproducible workflows in R, Bash,
+          high-performance computing environments, and established bioinformatics
+          tools. I am particularly interested in connecting quantitative patterns
+          with biological mechanisms rather than treating computation as an
+          endpoint in itself.
+        </p>
+
+        <p>
+          Across these areas, my broader research interest is understanding biology
+          at the limits of life, from extreme terrestrial environments to
+          space-associated conditions, and using integrated experimental and
+          computational approaches to reveal how organisms respond to
+          environmental stress.
         </p>
 
       </div>
@@ -439,7 +474,6 @@
     </div>
 
   </section>
-
 
   <!-- RESEARCH -->
 
@@ -458,9 +492,7 @@
 
       </div>
 
-
       <div class="research-grid">
-
 
         <a class="research-card" href="#">
 
@@ -474,7 +506,6 @@
           <span class="learn-more">Research details →</span>
 
         </a>
-
 
         <a class="research-card" href="#">
 
@@ -490,7 +521,6 @@
 
         </a>
 
-
         <a class="research-card" href="#">
 
           <h3>Space Biology</h3>
@@ -503,7 +533,6 @@
           <span class="learn-more">Research details →</span>
 
         </a>
-
 
         <a class="research-card" href="#">
 
@@ -519,13 +548,11 @@
 
         </a>
 
-
       </div>
 
     </div>
 
   </section>
-
 
   <!-- PUBLICATIONS -->
 
@@ -544,7 +571,6 @@
 
       </div>
 
-
       <div class="publication-panel">
 
         <p>
@@ -557,7 +583,6 @@
 
   </section>
 
-
   <!-- CV -->
 
   <section id="cv">
@@ -567,7 +592,6 @@
       <div class="section-heading">
         <h2>Curriculum Vitae</h2>
       </div>
-
 
       <div class="cv-panel">
 
@@ -592,7 +616,6 @@
 
   </section>
 
-
   <!-- CONTACT -->
 
   <section id="contact">
@@ -610,7 +633,6 @@
 
       </div>
 
-
       <div class="contact-links">
 
         <a class="button button-primary"
@@ -626,7 +648,6 @@
   </section>
 
 </main>
-
 
 <footer>
 
