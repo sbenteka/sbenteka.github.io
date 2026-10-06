@@ -28,8 +28,6 @@
       margin: 0 auto;
     }
 
-    /* NAVIGATION */
-
     header {
       background: rgba(255,255,255,0.97);
       border-bottom: 1px solid #e5e7eb;
@@ -68,8 +66,6 @@
       color: #111827;
     }
 
-    /* HERO */
-
     .hero {
       background: white;
       padding: 95px 0 85px;
@@ -88,6 +84,7 @@
       line-height: 1.05;
       letter-spacing: -0.04em;
       color: #111827;
+      white-space: nowrap;
     }
 
     .tagline {
@@ -150,8 +147,6 @@
       box-shadow: 0 20px 55px rgba(0,0,0,0.13);
     }
 
-    /* GENERAL SECTIONS */
-
     section {
       padding: 78px 0;
     }
@@ -177,8 +172,6 @@
       max-width: 720px;
     }
 
-    /* ABOUT */
-
     .about-text {
       font-size: 1.08rem;
       max-width: 920px;
@@ -193,8 +186,6 @@
     .about-text p:last-child {
       margin-bottom: 0;
     }
-
-    /* RESEARCH */
 
     .research-grid {
       display: grid;
@@ -238,254 +229,83 @@
       color: #475569;
     }
 
-    <!-- PUBLICATIONS -->
+    .publications-list {
+      max-width: 980px;
+    }
 
-<section id="publications">
+    .publication-category {
+      margin-bottom: 50px;
+    }
 
-  <div class="container">
+    .publication-category:last-child {
+      margin-bottom: 0;
+    }
 
-    <div class="section-heading">
+    .publication-category h3 {
+      font-size: 1.4rem;
+      margin: 0 0 22px;
+      color: #17212b;
+    }
 
-      <h2>Publications</h2>
+    .publication-item {
+      background: white;
+      border: 1px solid #e7ecf0;
+      border-radius: 14px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.035);
+    }
 
-      <p>
-        Peer-reviewed and ongoing research spanning microbial ecology,
-        symbiosis, extremophile microbiology, genomics, and stress biology.
-      </p>
+    .publication-item p {
+      margin: 0;
+      color: #465563;
+    }
 
-    </div>
+    .publication-title {
+      font-weight: 600;
+      color: #17212b;
+    }
 
+    .publication-journal {
+      font-style: italic;
+    }
 
-    <div class="publications-list">
+    .publication-item a {
+      color: #334e68;
+      text-decoration: none;
+      font-weight: 600;
+    }
 
+    .publication-item a:hover {
+      text-decoration: underline;
+    }
 
-      <!-- PEER-REVIEWED -->
+    .publication-links {
+      margin-top: 14px;
+    }
 
-      <div class="publication-category">
+    .status-label {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      background: #eef2f6;
+      color: #334155;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
 
-        <h3>Peer-Reviewed Publications</h3>
-
-
-        <div class="publication-item">
-          <p>
-            <strong>Ben Tekaya, S.</strong>, Nouioui, I., Flores, G.M.,
-            Neumann-Schaal, M., Bredoire, F., Basile, F.,
-            van Diepen, L.T.A., &amp; Ward, N.L. (2024).
-            <span class="publication-title">
-              Geodermatophilus maliterrae sp. nov., a member of the
-              Geodermatophilaceae isolated from badland surfaces in the
-              Red Desert, Wyoming, USA.
-            </span>
-            <span class="publication-journal">
-              International Journal of Systematic and Evolutionary Microbiology.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.1099/ijsem.0.006603"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-
-        <div class="publication-item">
-          <p>
-            <strong>Ben Tekaya, S.</strong>, Guerra, T., Rodriguez, D.,
-            Dawson, J.O., &amp; Hahn, D. (2018).
-            <span class="publication-title">
-              Frankia diversity in host-plant root nodules is independent
-              of abundance or relative diversity of Frankia in corresponding
-              rhizosphere soils.
-            </span>
-            <span class="publication-journal">
-              Applied and Environmental Microbiology.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.1128/AEM.02248-17"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-
-        <div class="publication-item">
-          <p>
-            <strong>Ben Tekaya, S.</strong>, Ganesan, A.S., Guerra, T.,
-            Dawson, J., Forstner, M.R.J., &amp; Hahn, D. (2017).
-            <span class="publication-title">
-              SybrGreen and Taqman-based qPCR approaches allow assessment
-              of the abundance and relative distribution of Frankia clusters
-              in soil.
-            </span>
-            <span class="publication-journal">
-              Applied and Environmental Microbiology.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.1128/AEM.02833-16"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-
-        <div class="publication-item">
-          <p>
-            Jaouani, A., Neifar, M., Prigione, V., Ayari, A., Sbissi, I.,
-            Ben Amor, S., <strong>Ben Tekaya, S.</strong>, Varese, G.C.,
-            Cherif, A., &amp; Gtari, M. (2014).
-            <span class="publication-title">
-              Diversity and enzymatic profiling of halotolerant micromycetes
-              from Sebkha El Melah, a Saharan salt flat in Southern Tunisia.
-            </span>
-            <span class="publication-journal">
-              BioMed Research International.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.1155/2014/439197"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-
-        <div class="publication-item">
-          <p>
-            <strong>Ben Tekaya, S.</strong>, Tipayno, S., Kim, K.,
-            Subramanian, P., &amp; Sa, T. (2013).
-            <span class="publication-title">
-              Rhizobacteria: Restoration of heavy metal contaminated soils.
-            </span>
-            In
-            <span class="publication-journal">
-              Physiological Mechanisms and Adaptation Strategies in Plants
-              Under Changing Environment.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.1007/978-1-4614-8600-8"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-
-        <div class="publication-item">
-          <p>
-            <strong>Ben Tekaya, S.</strong>, Tipayno, S., Chandrasekaran, M.,
-            Yim, W., &amp; Sa, T. (2012).
-            <span class="publication-title">
-              Actinobacteria isolation from metal contaminated soils for
-              assessment of their metal resistance and plant growth promoting
-              (PGP) characteristics.
-            </span>
-            <span class="publication-journal">
-              Korean Journal of Soil Science and Fertilizers.
-            </span>
-          </p>
-
-          <div class="publication-links">
-            <a href="https://doi.org/10.7745/KJSSF.2012.45.4.593"
-               target="_blank">
-              DOI
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-
-      <!-- SUBMITTED -->
-
-      <div class="publication-category">
-
-        <h3>Submitted Manuscripts</h3>
-
-        <div class="publication-item">
-
-          <p>
-  Sanchez-Martinez, S.<sup>†</sup>,
-  Biswas, S.<sup>†</sup>,
-  <strong>Ben Tekaya, S.<sup>†</sup></strong>,
-  Nguyen, K.,
-  Shree, C.,
-  Reister, J.,
-  Krause, G.R.,
-  Wheeler, T.J.,
-  Dvorochkin, N.,
-  Torres, M.,
-  &amp; Boothby, T.C.*
-  <span class="publication-title">
-    Tardigrade spaceflight responses confer stress-specific protection to human cells.
-  </span>
-</p>
-
-<div class="status-label">
-  Submitted to Nature · September 2026
-</div>
-
-<br>
-
-<div class="equal-contribution">
-  † EQUAL-CONTRIBUTING AUTHOR
-</div>
-        </div>
-
-      </div>
-
-
-      <!-- IN PREPARATION -->
-
-      <div class="publication-category">
-
-        <h3>Manuscripts in Preparation</h3>
-
-        <div class="publication-item">
-
-          <p>
-            Saiz, B.A.<sup>†</sup>,
-            <strong>Ben Tekaya, S.<sup>†</sup></strong>,
-            Basile, F., &amp; Ward, N.
-            <span class="publication-title">
-              Delayed Proteomic Response to Ultra Violet Irradiation in
-              <em>Geodermatophilus obscurus</em> G20.
-            </span>
-          </p>
-
-          <div class="status-label">
-            Manuscript in preparation
-          </div>
-
-          <br>
-
-          <div class="equal-contribution">
-            † EQUAL-CONTRIBUTING AUTHOR
-          </div>
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-    /* CV */
+    .equal-contribution {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 11px;
+      border-radius: 6px;
+      background: #17212b;
+      color: white;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
 
     .cv-panel {
       display: flex;
@@ -508,15 +328,11 @@
       color: #cbd5e1;
     }
 
-    /* CONTACT */
-
     .contact-links {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
     }
-
-    /* FOOTER */
 
     footer {
       background: #111827;
@@ -526,21 +342,15 @@
       font-size: 0.9rem;
     }
 
-    /* DESKTOP */
-
-    @media (min-width: 801px) {
-      .hero h1 {
-        white-space: nowrap;
-      }
-    }
-
-    /* MOBILE */
-
     @media (max-width: 800px) {
       .hero-layout {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 45px;
+      }
+
+      .hero h1 {
+        white-space: normal;
       }
 
       .hero-photo {
@@ -582,10 +392,7 @@
 <header>
   <div class="container">
     <nav>
-
-      <div class="nav-name">
-        Seifeddine Ben Tekaya
-      </div>
+      <div class="nav-name">Seifeddine Ben Tekaya</div>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -594,21 +401,16 @@
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </div>
-
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- HOME -->
-
   <section class="hero">
-
     <div class="container hero-layout">
 
       <div>
-
         <h1>Seifeddine Ben Tekaya</h1>
 
         <p class="tagline">
@@ -622,39 +424,29 @@
         </p>
 
         <div class="hero-buttons">
-
-          <a class="button button-primary"
-             href="#research">
-             Explore Research
+          <a class="button button-primary" href="#research">
+            Explore Research
           </a>
 
           <a class="button button-secondary"
              href="https://github.com/sbenteka"
              target="_blank">
-             GitHub
+            GitHub
           </a>
-
         </div>
-
       </div>
 
       <div class="hero-photo">
-
         <img
           class="profile-photo"
           src="https://avatars.githubusercontent.com/u/253610381?v=4"
           alt="Seifeddine Ben Tekaya">
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- ABOUT -->
-
   <section id="about">
-
     <div class="container">
 
       <div class="section-heading">
@@ -702,32 +494,24 @@
         </p>
 
       </div>
-
     </div>
-
   </section>
 
-  <!-- RESEARCH -->
-
   <section id="research">
-
     <div class="container">
 
       <div class="section-heading">
-
         <h2>Research</h2>
 
         <p>
           My work combines experimental biology, genomics, transcriptomics,
           microbial ecology, and computational analysis.
         </p>
-
       </div>
 
       <div class="research-grid">
 
         <a class="research-card" href="#">
-
           <h3>Extremophile Microbiology</h3>
 
           <p>
@@ -736,11 +520,9 @@
           </p>
 
           <span class="learn-more">Research details →</span>
-
         </a>
 
         <a class="research-card" href="#">
-
           <h3>Microbial Symbiosis</h3>
 
           <p>
@@ -750,11 +532,9 @@
           </p>
 
           <span class="learn-more">Research details →</span>
-
         </a>
 
         <a class="research-card" href="#">
-
           <h3>Space Biology</h3>
 
           <p>
@@ -763,11 +543,9 @@
           </p>
 
           <span class="learn-more">Research details →</span>
-
         </a>
 
         <a class="research-card" href="#">
-
           <h3>Bioinformatics &amp; Data Science</h3>
 
           <p>
@@ -777,48 +555,221 @@
           </p>
 
           <span class="learn-more">Research details →</span>
-
         </a>
 
       </div>
-
     </div>
-
   </section>
 
-  <!-- PUBLICATIONS -->
-
   <section id="publications">
-
     <div class="container">
 
       <div class="section-heading">
-
         <h2>Publications</h2>
 
         <p>
-          Peer-reviewed research in microbial ecology, symbiosis,
-          extremophile microbiology, genomics, and stress biology.
+          Peer-reviewed and ongoing research spanning microbial ecology,
+          symbiosis, extremophile microbiology, genomics, and stress biology.
         </p>
-
       </div>
 
-      <div class="publication-panel">
+      <div class="publications-list">
 
-        <p>
-          Full publication list and publication links will be added here.
-        </p>
+        <div class="publication-category">
+          <h3>Peer-Reviewed Publications</h3>
+
+          <div class="publication-item">
+            <p>
+              <strong>Ben Tekaya, S.</strong>, Nouioui, I., Flores, G.M.,
+              Neumann-Schaal, M., Bredoire, F., Basile, F.,
+              van Diepen, L.T.A., &amp; Ward, N.L. (2024).
+              <span class="publication-title">
+                Geodermatophilus maliterrae sp. nov., a member of the
+                Geodermatophilaceae isolated from badland surfaces in the
+                Red Desert, Wyoming, USA.
+              </span>
+              <span class="publication-journal">
+                International Journal of Systematic and Evolutionary Microbiology.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1099/ijsem.0.006603" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <p>
+              <strong>Ben Tekaya, S.</strong>, Guerra, T., Rodriguez, D.,
+              Dawson, J.O., &amp; Hahn, D. (2018).
+              <span class="publication-title">
+                Frankia diversity in host-plant root nodules is independent
+                of abundance or relative diversity of Frankia in corresponding
+                rhizosphere soils.
+              </span>
+              <span class="publication-journal">
+                Applied and Environmental Microbiology.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1128/AEM.02248-17" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <p>
+              <strong>Ben Tekaya, S.</strong>, Ganesan, A.S., Guerra, T.,
+              Dawson, J., Forstner, M.R.J., &amp; Hahn, D. (2017).
+              <span class="publication-title">
+                SybrGreen and Taqman-based qPCR approaches allow assessment
+                of the abundance and relative distribution of Frankia clusters
+                in soil.
+              </span>
+              <span class="publication-journal">
+                Applied and Environmental Microbiology.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1128/AEM.02833-16" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <p>
+              Jaouani, A., Neifar, M., Prigione, V., Ayari, A., Sbissi, I.,
+              Ben Amor, S., <strong>Ben Tekaya, S.</strong>, Varese, G.C.,
+              Cherif, A., &amp; Gtari, M. (2014).
+              <span class="publication-title">
+                Diversity and enzymatic profiling of halotolerant micromycetes
+                from Sebkha El Melah, a Saharan salt flat in Southern Tunisia.
+              </span>
+              <span class="publication-journal">
+                BioMed Research International.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1155/2014/439197" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <p>
+              <strong>Ben Tekaya, S.</strong>, Tipayno, S., Kim, K.,
+              Subramanian, P., &amp; Sa, T. (2013).
+              <span class="publication-title">
+                Rhizobacteria: Restoration of heavy metal contaminated soils.
+              </span>
+              In
+              <span class="publication-journal">
+                Physiological Mechanisms and Adaptation Strategies in Plants
+                Under Changing Environment.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.1007/978-1-4614-8600-8" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+
+          <div class="publication-item">
+            <p>
+              <strong>Ben Tekaya, S.</strong>, Tipayno, S., Chandrasekaran, M.,
+              Yim, W., &amp; Sa, T. (2012).
+              <span class="publication-title">
+                Actinobacteria isolation from metal contaminated soils for
+                assessment of their metal resistance and plant growth promoting
+                (PGP) characteristics.
+              </span>
+              <span class="publication-journal">
+                Korean Journal of Soil Science and Fertilizers.
+              </span>
+            </p>
+
+            <div class="publication-links">
+              <a href="https://doi.org/10.7745/KJSSF.2012.45.4.593" target="_blank">
+                DOI
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-category">
+          <h3>Submitted Manuscripts</h3>
+
+          <div class="publication-item">
+            <p>
+              Sanchez-Martinez, S.<sup>†</sup>,
+              Biswas, S.<sup>†</sup>,
+              <strong>Ben Tekaya, S.<sup>†</sup></strong>,
+              Nguyen, K.,
+              Shree, C.,
+              Reister, J.,
+              Krause, G.R.,
+              Wheeler, T.J.,
+              Dvorochkin, N.,
+              Torres, M.,
+              &amp; Boothby, T.C.
+              <span class="publication-title">
+                Tardigrade spaceflight responses confer stress-specific protection to human cells.
+              </span>
+            </p>
+
+            <div class="status-label">
+              Submitted to Nature · September 2026
+            </div>
+
+            <br>
+
+            <div class="equal-contribution">
+              † EQUAL-CONTRIBUTING AUTHOR
+            </div>
+          </div>
+        </div>
+
+        <div class="publication-category">
+          <h3>Manuscripts in Preparation</h3>
+
+          <div class="publication-item">
+            <p>
+              Saiz, B.A.<sup>†</sup>,
+              <strong>Ben Tekaya, S.<sup>†</sup></strong>,
+              Basile, F., &amp; Ward, N.
+              <span class="publication-title">
+                Delayed Proteomic Response to Ultra Violet Irradiation in
+                <em>Geodermatophilus obscurus</em> G20.
+              </span>
+            </p>
+
+            <div class="status-label">
+              Manuscript in preparation
+            </div>
+
+            <br>
+
+            <div class="equal-contribution">
+              † EQUAL-CONTRIBUTING AUTHOR
+            </div>
+          </div>
+        </div>
 
       </div>
-
     </div>
-
   </section>
 
-  <!-- CV -->
-
   <section id="cv">
-
     <div class="container">
 
       <div class="section-heading">
@@ -826,69 +777,52 @@
       </div>
 
       <div class="cv-panel">
-
         <div>
-
           <h3>Academic CV</h3>
 
           <p>
             Research experience, publications, teaching, scientific service,
             technical expertise, and professional activities.
           </p>
-
         </div>
 
         <a class="button button-secondary"
-   href="Seifeddine%20Ben%20Tekaya%20CV_2026.pdf"
-   target="_blank">
-  View CV
-</a>
-
+           href="Seifeddine%20Ben%20Tekaya%20CV_2026.pdf"
+           target="_blank">
+          View CV
+        </a>
       </div>
-
     </div>
-
   </section>
 
-  <!-- CONTACT -->
-
   <section id="contact">
-
     <div class="container">
 
       <div class="section-heading">
-
         <h2>Contact</h2>
 
         <p>
-          Research collaborations, academic opportunities, and scientific
-          communication.
+          Research collaborations, academic opportunities, and scientific communication.
         </p>
-
       </div>
 
       <div class="contact-links">
-
         <a class="button button-primary"
            href="https://github.com/sbenteka"
            target="_blank">
           GitHub
         </a>
-
       </div>
 
     </div>
-
   </section>
 
 </main>
 
 <footer>
-
   <div class="container">
     © 2026 Seifeddine Ben Tekaya
   </div>
-
 </footer>
 
 </body>
