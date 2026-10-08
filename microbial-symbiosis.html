@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microbial Symbiosis | Seifeddine Ben Tekaya</title>
+  <meta name="description" content="Research by Seifeddine Ben Tekaya on Frankia-actinorhizal symbioses, microbial ecology, host selection, and quantitative analysis of Frankia populations in soil and root nodules." />
+
+  <style>
+    :root{
+      --ink:#1f2933;
+      --muted:#5f6b76;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      --line:#dfe5ea;
+      --accent:#234e52;
+      --accent-soft:#e9f2f2;
+      --dark:#17212b;
+      --shadow:0 12px 30px rgba(31,41,51,.08);
+      --radius:18px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.7;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:min(1120px, 90%);
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      min-height:72px;
+      gap:24px;
+    }
+
+    .brand{
+      font-weight:700;
+      font-size:1.05rem;
+      letter-spacing:.01em;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+      list-style:none;
+      font-size:.95rem;
+      color:#46515c;
+    }
+
+    .nav-links a:hover{
+      color:#000;
+    }
+
+    .hero{
+      background:#fff;
+      padding:88px 0 72px;
+      border-bottom:1px solid var(--line);
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:16px;
+      font-size:.82rem;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--accent);
+    }
+
+    .hero h1{
+      font-size:clamp(2.7rem, 7vw, 4.7rem);
+      line-height:1.03;
+      letter-spacing:-.045em;
+      max-width:900px;
+      margin-bottom:24px;
+    }
+
+    .hero p{
+      max-width:860px;
+      font-size:1.17rem;
+      color:#52606d;
+    }
+
+    .hero-actions{
+      margin-top:30px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:0 18px;
+      border-radius:999px;
+      font-size:.92rem;
+      font-weight:700;
+      border:1px solid var(--line);
+      background:#fff;
+    }
+
+    .button.primary{
+      background:var(--dark);
+      color:#fff;
+      border-color:var(--dark);
+    }
+
+    section{
+      padding:76px 0;
+    }
+
+    .section-head{
+      max-width:790px;
+      margin-bottom:34px;
+    }
+
+    .section-head h2{
+      font-size:clamp(2rem, 4vw, 3rem);
+      line-height:1.1;
+      letter-spacing:-.03em;
+      margin-bottom:14px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:1.04rem;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .story-card,
+    .figure-card,
+    .paper-card,
+    .closing-card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .story-card{
+      padding:34px;
+    }
+
+    .story-card p + p{
+      margin-top:18px;
+    }
+
+    .mini-panel{
+      padding:28px;
+      background:var(--accent-soft);
+      border:1px solid #d7e7e7;
+      border-radius:var(--radius);
+    }
+
+    .mini-panel h3{
+      font-size:1.18rem;
+      margin-bottom:10px;
+    }
+
+    .mini-panel p{
+      color:#42515a;
+      font-size:.98rem;
+    }
+
+    .morphology-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:28px;
+    }
+
+    .figure-card{
+      overflow:hidden;
+    }
+
+    .figure-card img{
+      width:100%;
+      aspect-ratio:4 / 3;
+      object-fit:cover;
+      background:#edf1f4;
+    }
+
+    .figure-card .caption{
+      padding:16px 18px 18px;
+      font-size:.86rem;
+      line-height:1.5;
+      color:#65727d;
+    }
+
+    .paper-card{
+      padding:34px;
+      margin-top:28px;
+    }
+
+    .paper-label{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:.78rem;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      color:var(--accent);
+    }
+
+    .paper-card h3{
+      font-size:1.7rem;
+      line-height:1.2;
+      letter-spacing:-.02em;
+      margin-bottom:12px;
+    }
+
+    .paper-meta{
+      color:#687580;
+      font-size:.92rem;
+      margin-bottom:20px;
+    }
+
+    .paper-layout{
+      display:grid;
+      grid-template-columns:1fr 1.08fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .paper-layout.reverse{
+      grid-template-columns:1.08fr 1fr;
+    }
+
+    .paper-text p{
+      color:#4d5964;
+    }
+
+    .paper-text p + p{
+      margin-top:14px;
+    }
+
+    .takeaway{
+      margin-top:18px;
+      padding:16px 18px;
+      border-left:4px solid var(--accent);
+      background:#f5f8f8;
+      border-radius:0 12px 12px 0;
+      color:#33434b;
+      font-size:.95rem;
+    }
+
+    .paper-figure{
+      background:#f4f6f8;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+    }
+
+    .paper-figure img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      background:white;
+    }
+
+    .paper-figure .caption{
+      padding:14px 16px 16px;
+      font-size:.84rem;
+      line-height:1.45;
+      color:#66737e;
+      background:#fff;
+    }
+
+    .paper-link{
+      display:inline-flex;
+      margin-top:18px;
+      font-size:.9rem;
+      font-weight:700;
+      color:var(--accent);
+    }
+
+    .paper-link:hover{
+      text-decoration:underline;
+    }
+
+    .closing-card{
+      padding:38px;
+      background:var(--dark);
+      color:white;
+    }
+
+    .closing-card h2{
+      font-size:2rem;
+      margin-bottom:14px;
+    }
+
+    .closing-card p{
+      color:#d5dde5;
+      max-width:880px;
+    }
+
+    .credits{
+      padding-top:0;
+    }
+
+    .credits-box{
+      border-top:1px solid var(--line);
+      padding-top:28px;
+      color:#6a7680;
+      font-size:.86rem;
+    }
+
+    .credits-box p + p{
+      margin-top:8px;
+    }
+
+    footer{
+      padding:36px 0 46px;
+      color:#73808a;
+      font-size:.88rem;
+    }
+
+    @media (max-width:900px){
+      .intro-grid,
+      .paper-layout,
+      .paper-layout.reverse{
+        grid-template-columns:1fr;
+      }
+
+      .paper-card{
+        padding:26px;
+      }
+    }
+
+    @media (max-width:800px){
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding:68px 0 56px;
+      }
+
+      section{
+        padding:58px 0;
+      }
+
+      .morphology-grid{
+        grid-template-columns:1fr;
+      }
+
+      .story-card{
+        padding:26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Seifeddine Ben Tekaya</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="index.html#publications">Publications</a></li>
+        <li><a href="index.html#cv">CV</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">Research Area</span>
+        <h1>Microbial Symbiosis</h1>
+        <p>
+          My interest in microbial symbiosis grew from a long-standing curiosity about Actinobacteria
+          and the different strategies bacteria use to persist, compete, and function in complex
+          environments. Frankia-actinorhizal associations provided a particularly compelling system:
+          an actinobacterium that not only survives in soil, but forms highly specialized,
+          nitrogen-fixing partnerships with plants.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#frankia">Explore the research</a>
+          <a class="button" href="index.html#research">Back to Research</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="frankia">
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Frankia & Actinorhizal Plants</span>
+          <h2>From bacterial morphology to host-selected symbiosis</h2>
+          <p>
+            My work in this area focused on understanding how Frankia populations are distributed
+            in soil, how they can be quantified accurately, and how those environmental populations
+            relate to the strains ultimately found inside nitrogen-fixing root nodules.
+          </p>
+        </div>
+
+        <div class="intro-grid">
+          <div class="story-card">
+            <p>
+              <em>Frankia</em> are filamentous actinobacteria that occur in soil and can establish
+              nitrogen-fixing root nodules with a diverse group of woody actinorhizal plants.
+              Their biology sits at an interesting intersection of microbial ecology, plant-microbe
+              interactions, and nitrogen cycling.
+            </p>
+
+            <p>
+              This system allowed me to approach symbiosis from an ecological perspective:
+              which <em>Frankia</em> populations are present in soil, which become enriched around
+              plant roots, and which are ultimately selected into nodules? Answering those questions
+              required both quantitative molecular tools and direct comparison of environmental
+              and symbiotic populations.
+            </p>
+          </div>
+
+          <div class="mini-panel">
+            <h3>Why this system interested me</h3>
+            <p>
+              My broader research has repeatedly returned to Actinobacteria because of their
+              remarkable ecological diversity. In extremophile systems, the question is often how
+              bacteria tolerate environmental stress. In symbiosis, the complementary question is
+              how bacteria succeed through highly specific biological interactions with a host.
+            </p>
+          </div>
+        </div>
+
+        <div class="morphology-grid">
+          <figure class="figure-card">
+            <img src="Sporangium_of_Frankia.jpg" alt="Microscopy image showing sporangia of Frankia" />
+            <figcaption class="caption">
+              <em>Frankia</em> sporangia among filamentous hyphae. Image by Kkucho,
+              Wikimedia Commons, licensed under CC BY-SA 3.0.
+            </figcaption>
+          </figure>
+
+          <figure class="figure-card">
+            <img src="Hypha_and_vesicle_of_Franikia.jpg" alt="Microscopy image showing Frankia hyphae and vesicles" />
+            <figcaption class="caption">
+              <em>Frankia</em> hyphae and vesicles. Image by Kkucho,
+              Wikimedia Commons, licensed under CC BY-SA 3.0.
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">Quantifying Frankia in Soil</span>
+          <h2>Building tools to measure environmental populations</h2>
+          <p>
+            Before asking which <em>Frankia</em> populations plants select, we first needed reliable
+            ways to determine which populations were present in soil and in what abundance.
+          </p>
+        </div>
+
+        <article class="paper-card">
+          <span class="paper-label">Applied and Environmental Microbiology · 2017</span>
+          <h3>Sybr Green- and TaqMan-based qPCR approaches for Frankia clusters</h3>
+          <div class="paper-meta">
+            Ben Tekaya S, Ganesan AS, Guerra T, Dawson JO, Forstner MRJ, Hahn D.
+          </div>
+
+          <div class="paper-layout">
+            <div class="paper-text">
+              <p>
+                This study expanded molecular quantification of <em>Frankia</em> by developing
+                cluster-specific qPCR approaches for clusters 2 and 4, complementing existing
+                assays for clusters 1 and 3. The resulting framework allowed the major taxonomic
+                groups within the genus to be assessed together rather than focusing only on the
+                historically better-characterized clusters.
+              </p>
+
+              <p>
+                Applying these assays to different soils showed that vegetation was associated with
+                striking differences in detectable <em>Frankia</em> community composition.
+                Prairie soils contained representatives of all four major clusters and showed
+                broader diversity, while soils beneath some host and nonhost trees were dominated
+                by a much more restricted subset of populations.
+              </p>
+
+              <div class="takeaway">
+                <strong>Key idea:</strong> understanding symbiosis starts before nodulation.
+                The environmental pool of potential symbionts has to be measured first.
+              </div>
+
+              <a class="paper-link"
+                 href="https://doi.org/10.1128/AEM.02833-16"
+                 target="_blank"
+                 rel="noopener">
+                View publication →
+              </a>
+            </div>
+
+            <figure class="paper-figure">
+              <img src="frankia_aem2017_fig3.jpg"
+                   alt="Published figure showing qPCR quantification of Frankia clusters in soils" />
+              <figcaption class="caption">
+                Quantification of <em>Frankia</em> populations in soils using complementary
+                qPCR approaches. From Ben Tekaya et al. (2017),
+                <em>Applied and Environmental Microbiology</em> 83:e02833-16.
+                Reproduced from the authors' published work with citation to the original article.
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow">From Soil to Root Nodules</span>
+          <h2>Does abundance in soil predict symbiotic success?</h2>
+          <p>
+            The next question was more ecological: do the <em>Frankia</em> populations that dominate
+            the rhizosphere also dominate inside root nodules?
+          </p>
+        </div>
+
+        <article class="paper-card">
+          <span class="paper-label">Applied and Environmental Microbiology · 2018</span>
+          <h3>Frankia diversity in root nodules versus corresponding rhizosphere soils</h3>
+          <div class="paper-meta">
+            Ben Tekaya S, Guerra T, Rodriguez D, Dawson JO, Hahn D.
+          </div>
+
+          <div class="paper-layout reverse">
+            <figure class="paper-figure">
+              <img src="frankia_aem2018_fig1.jpg"
+                   alt="Published phylogenetic figure showing Frankia populations recovered from root nodules" />
+              <figcaption class="caption">
+                Phylogenetic relationships and distribution of <em>Frankia</em> populations
+                recovered from root nodules of different host plants. From Ben Tekaya et al. (2018),
+                <em>Applied and Environmental Microbiology</em> 84:e02248-17.
+                Reproduced from the authors' published work with citation to the original article.
+              </figcaption>
+            </figure>
+
+            <div class="paper-text">
+              <p>
+                Using plant microcosms, qPCR, targeted Illumina sequencing of soil populations,
+                and sequence analysis of nodule-associated <em>Frankia</em>, we compared the
+                diversity present in rhizosphere soils with the populations actually recovered
+                from root nodules.
+              </p>
+
+              <p>
+                The result was a clear ecological disconnect. The populations most abundant in
+                soil were not necessarily the populations recovered from nodules, and several
+                nodule-associated sequences were rare or undetected in the corresponding soils.
+                This indicated that root nodule formation could not be explained simply by the
+                abundance or relative diversity of <em>Frankia</em> populations in the surrounding
+                rhizosphere.
+              </p>
+
+              <div class="takeaway">
+                <strong>Key idea:</strong> symbiosis acts as a biological filter. Host association
+                can favor particular microbial partners rather than simply reflecting the most
+                abundant organisms in the environment.
+              </div>
+
+              <a class="paper-link"
+                 href="https://doi.org/10.1128/AEM.02248-17"
+                 target="_blank"
+                 rel="noopener">
+                View publication →
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container">
+        <div class="closing-card">
+          <h2>Ecology through interaction</h2>
+          <p>
+            This work shaped how I think about microbial ecology more broadly. Environmental
+            persistence is not governed only by intrinsic stress tolerance or metabolic capacity.
+            It is also shaped by biological interactions, host selection, competition, and access
+            to specialized ecological niches. The <em>Frankia</em>-actinorhizal system gave me a
+            framework for studying those interactions quantitatively, from environmental
+            populations in soil to the highly selective environment of the root nodule.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="credits">
+      <div class="container">
+        <div class="credits-box">
+          <p>
+            Morphology images: Kkucho, Wikimedia Commons, CC BY-SA 3.0.
+          </p>
+          <p>
+            Published research figures: Ben Tekaya et al. 2017 and Ben Tekaya et al. 2018,
+            <em>Applied and Environmental Microbiology</em>. See linked original publications
+            for full figure legends and article details.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Seifeddine Ben Tekaya
+    </div>
+  </footer>
+
+</body>
+</html>
