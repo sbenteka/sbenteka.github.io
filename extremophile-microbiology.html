@@ -228,6 +228,12 @@
       color: #17212b;
     }
 
+    .project-block h4 {
+      margin: 20px 0 10px;
+      font-size: 1.02rem;
+      color: #17212b;
+    }
+
     .project-block p {
       margin-top: 0;
       margin-bottom: 16px;
@@ -346,6 +352,13 @@
       color: #52606d;
     }
 
+    .two-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
     .future-list {
       margin: 0;
       padding-left: 22px;
@@ -372,7 +385,8 @@
       .figure-grid,
       .metrics-grid,
       .gallery-grid,
-      .feature-layout {
+      .feature-layout,
+      .two-panel {
         grid-template-columns: 1fr;
       }
 
@@ -601,18 +615,18 @@
 
         <div class="gallery-grid">
           <div class="gallery-card">
-            <img src="red_desert_plate_white.jpg" alt="Representative pale colony isolate from the Red Desert collection grown on an agar plate.">
-            <p>Representative pale colony isolate from the Red Desert collection.</p>
+            <img src="red_desert_plate_white.jpg" alt="Kribbella isolate from the Wyoming Red Desert grown on an agar plate.">
+            <p><em>Kribbella</em> sp. isolate from the Wyoming Red Desert.</p>
           </div>
 
           <div class="gallery-card">
-            <img src="red_desert_plate_red.jpg" alt="Representative pink-red colony isolate from the Red Desert collection grown on an agar plate.">
-            <p>Representative pink-red colony isolate from the Red Desert collection.</p>
+            <img src="red_desert_plate_red.jpg" alt="Novel Actinomadura isolate from the Wyoming Red Desert grown on an agar plate.">
+            <p>Novel <em>Actinomadura</em> sp. isolate.</p>
           </div>
 
           <div class="gallery-card">
-            <img src="red_desert_plate_black.jpg" alt="Representative black colony isolate from the Red Desert collection grown on an agar plate.">
-            <p>Representative black colony isolate from the Red Desert collection.</p>
+            <img src="red_desert_plate_black.jpg" alt="Novel Geodermatophilus isolate from the Wyoming Red Desert grown on an agar plate.">
+            <p>Novel <em>Geodermatophilus</em> sp. isolate.</p>
           </div>
         </div>
       </div>
@@ -647,20 +661,57 @@
       </div>
 
       <div class="project-block">
-        <h3><em>Geodermatophilus maliterrae</em> as a case study</h3>
+        <h3><em>Geodermatophilus maliterrae</em> as a featured published case study</h3>
 
         <p>
           A published example emerging from this work is
           <em>Geodermatophilus maliterrae</em>, a novel member of the
-          Geodermatophilaceae recovered from badland surfaces in the Red Desert of Wyoming.
-          This species illustrates the overall logic of the project: environmental sampling,
-          cultivation, phenotypic assessment, genome sequencing, phylogenomic analysis,
-          and formal taxonomic description.
+          Geodermatophilaceae recovered from badland rock surfaces in the Wyoming Red Desert.
+          This study illustrates the broader structure of the research program: environmental
+          sampling, cultivation, phenotypic characterization, genome sequencing, phylogenomic
+          analysis, and formal taxonomic description.
         </p>
+
+        <p>
+          The type strain, WL48A<sup>T</sup>, was isolated from the surface of badland
+          sedimentary rock, formed dry black colonies, and was deposited in major international
+          repositories including DSMZ, NCIMB, NCCB, and ATCC. The resulting publication provides
+          a concrete example of how field sampling in extreme lithic environments can lead to
+          the recovery and formal recognition of novel bacterial diversity.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Why this matters:</strong> this was not simply an isolate description. It
+          established a new species, created a publicly accessible type strain resource, and
+          provided a genomic starting point for future studies on stress tolerance and ecological
+          fitness in rock-associated bacteria.
+        </div>
+
+        <div class="two-panel">
+          <div class="figure-card">
+            <h3>Evidence for species novelty</h3>
+            <img src="gmal_species_delineation.png" alt="Graphic comparing 16S rRNA similarity, ANI, and dDDH values between Geodermatophilus maliterrae WL48A-T and Geodermatophilus bullaregiensis.">
+            <p>
+              Compared with its closest relative, <em>G. bullaregiensis</em>, strain
+              WL48A<sup>T</sup> showed 16S rRNA similarity of 98.8%, ANI of 93.3%, and
+              dDDH of 51.8%, supporting recognition as a distinct species.
+            </p>
+          </div>
+
+          <div class="figure-card">
+            <h3>Phylogenomic placement</h3>
+            <img src="gmal_phylogenomic_tree_tight.png" alt="Phylogenomic tree showing the placement of Geodermatophilus maliterrae WL48A-T among related Geodermatophilus type strains.">
+            <p>
+              Adapted from Ben Tekaya et al. 2024, IJSEM 74:006603 (CC BY). The phylogenomic
+              tree places WL48A<sup>T</sup> in a distinct, well-supported subclade within the
+              genus <em>Geodermatophilus</em>.
+            </p>
+          </div>
+        </div>
 
         <div class="metrics-grid">
           <div class="metric-card">
-            <div class="value">5.44 Mb</div>
+            <div class="value">5.4 Mb</div>
             <div class="label">Genome size</div>
           </div>
 
@@ -675,11 +726,20 @@
           </div>
         </div>
 
+        <h4>Ecological and genomic highlights</h4>
         <p>
-          Beyond formal species description, this work contributes to a broader effort to
-          identify genomic features and evolutionary patterns associated with environmental
-          resilience in rock-associated extremotolerant bacteria. A phylogenomic figure can
-          be added here in a later refinement pass.
+          Beyond formal species description, the genome of WL48A<sup>T</sup> offers early
+          clues to potential stress-response capabilities relevant to life on exposed rock
+          surfaces. Comparative analysis highlighted genes associated with DNA repair,
+          oxidative stress, carbon starvation, osmotic stress, and metal resistance.
+          The strain also carried a distinct set of arsenic-resistance genes and showed
+          a richer secondary-metabolite biosynthetic profile than its closest relative.
+        </p>
+
+        <p>
+          Taken together, these features make <em>G. maliterrae</em> more than a taxonomic
+          endpoint. It serves as a model case linking field discovery, comparative genomics,
+          and broader questions about ecological fitness in extreme lithic environments.
         </p>
 
         <div class="publication-link">
