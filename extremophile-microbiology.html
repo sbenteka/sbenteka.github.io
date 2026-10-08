@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Extremophile Microbiology | Seifeddine Ben Tekaya</title>
+
+  <meta name="description"
+        content="Extremophile microbiology research by Seifeddine Ben Tekaya, spanning halotolerant fungi, Wyoming Red Desert actinobacteria, novel species discovery, and mechanistic studies of ecological fitness under environmental stress.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2933;
+      background: #f7f9fb;
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 70px;
+    }
+
+    .nav-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #17212b;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #475569;
+      font-size: 0.94rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #111827;
+    }
+
+    .hero {
+      background: white;
+      padding: 90px 0 80px;
+    }
+
+    .hero h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: #111827;
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #334155;
+      background: #eef2f6;
+      padding: 6px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .hero .lead {
+      font-size: 1.15rem;
+      color: #475569;
+      max-width: 860px;
+      margin-bottom: 26px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.94rem;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #17212b;
+      color: white;
+    }
+
+    .button-primary:hover {
+      background: #334155;
+    }
+
+    .button-secondary {
+      background: #eef2f6;
+      color: #243447;
+    }
+
+    .button-secondary:hover {
+      background: #e2e8f0;
+    }
+
+    section {
+      padding: 78px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: #f3f6f8;
+    }
+
+    .section-heading {
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 10px;
+      font-size: 2.1rem;
+      letter-spacing: -0.02em;
+      color: #17212b;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: #64748b;
+      max-width: 760px;
+    }
+
+    .text-block {
+      max-width: 940px;
+      color: #3f4d5a;
+      font-size: 1.05rem;
+    }
+
+    .text-block p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .figure-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 28px;
+      margin-bottom: 30px;
+    }
+
+    .figure-card {
+      background: white;
+      border: 1px solid #e7ecf0;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 7px 24px rgba(0,0,0,0.04);
+    }
+
+    .figure-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .figure-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: #17212b;
+    }
+
+    .figure-card p {
+      margin: 14px 0 0;
+      font-size: 0.95rem;
+      color: #52606d;
+    }
+
+    .project-block {
+      background: white;
+      border: 1px solid #e7ecf0;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 7px 24px rgba(0,0,0,0.04);
+      margin-bottom: 22px;
+    }
+
+    .project-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-block h3 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+      color: #17212b;
+    }
+
+    .project-block p {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #465563;
+    }
+
+    .project-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-box {
+      background: #eef4f8;
+      border-left: 4px solid #17212b;
+      padding: 18px 20px;
+      border-radius: 10px;
+      margin-top: 18px;
+      color: #334155;
+    }
+
+    .highlight-box strong {
+      color: #17212b;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 20px 0 24px;
+    }
+
+    .metric-card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .metric-card .value {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #17212b;
+      margin-bottom: 6px;
+    }
+
+    .metric-card .label {
+      font-size: 0.92rem;
+      color: #64748b;
+    }
+
+    .publication-link {
+      margin-top: 18px;
+    }
+
+    .publication-link a {
+      color: #334e68;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .publication-link a:hover {
+      text-decoration: underline;
+    }
+
+    .future-list {
+      margin: 0;
+      padding-left: 22px;
+      color: #465563;
+    }
+
+    .future-list li {
+      margin-bottom: 12px;
+    }
+
+    .future-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    footer {
+      background: #111827;
+      color: #94a3b8;
+      padding: 35px 0;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .figure-grid,
+      .metrics-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="nav-name" href="index.html">Seifeddine Ben Tekaya</a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#early-work">Early Work</a>
+        <a href="#red-desert">Red Desert</a>
+        <a href="#mechanism">Mechanistic Direction</a>
+        <a href="#future">Future Directions</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Research Area</div>
+
+      <h1>Extremophile Microbiology</h1>
+
+      <p class="lead">
+        I study microorganisms adapted to severe environmental stress, with a focus on
+        diversity, ecology, genomics, and the biological mechanisms that contribute to
+        ecological fitness in saline, arid, nutrient-limited, and otherwise extreme habitats.
+      </p>
+
+      <div class="button-row">
+        <a class="button button-primary" href="#overview">Explore this research area</a>
+        <a class="button button-secondary" href="index.html">Back to homepage</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why extremotolerance interests me</h2>
+      </div>
+
+      <div class="text-block">
+        <p>
+          A central theme of my research is understanding how microorganisms survive,
+          remain metabolically active, and maintain ecological fitness under environmental
+          conditions that impose intense physiological stress. These conditions include
+          high salinity, desiccation, nutrient limitation, irradiation, temperature
+          fluctuation, and other constraints that challenge cellular stability and growth.
+        </p>
+
+        <p>
+          Extremotolerant microorganisms provide powerful natural systems for addressing
+          broader questions in microbial ecology, adaptation, genome evolution, and the
+          boundaries of habitability. I am particularly interested in linking environmental
+          occurrence and taxonomic diversity with the physiological and molecular traits
+          that allow these organisms to persist under stress.
+        </p>
+
+        <p>
+          This line of work began with halotolerant fungal communities in Saharan salt flats
+          and has expanded into a broader research program centered on the discovery,
+          characterization, and mechanistic study of extremotolerant bacteria associated
+          with the Wyoming Red Desert.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="early-work">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Early work: halotolerant fungi from Sebkha El Melah</h2>
+        <p>
+          My early work in Tunisia examined fungal diversity and stress tolerance in
+          hypersaline Saharan environments, with a particular focus on Sebkha El Melah
+          in southern Tunisia.
+        </p>
+      </div>
+
+      <div class="text-block">
+        <p>
+          This work contributed to the study by Jaouani et al. (2014), which characterized
+          moderately halotolerant micromycetes isolated from a Saharan salt flat. The study
+          combined isolation, identification, and physiological profiling to describe fungal
+          diversity under hypersaline conditions and to evaluate tolerance to multiple
+          environmental stressors.
+        </p>
+      </div>
+
+      <div class="figure-grid">
+        <div class="figure-card">
+          <h3>Sampling map of Sebkha El Melah</h3>
+          <img src="sebkha_el_melah_sampling_map.png" alt="Sampling map of Sebkha El Melah in southern Tunisia showing the study area and L1, L2, and L3 sampling locations.">
+          <p>
+            Sampling map showing Sebkha El Melah in southern Tunisia and the three sampling
+            locations (L1, L2, L3). Adapted from Jaouani et al. 2014, BioMed Research International
+            (CC BY). The original image includes source credits for the base imagery.
+          </p>
+        </div>
+
+        <div class="figure-card">
+          <h3>Genus composition and stress-tolerance summary</h3>
+          <img src="sebkha_genus_donut_chart_centered.png" alt="Donut chart showing genus composition of Sebkha El Melah fungal isolates and key stress-tolerance results.">
+          <p>
+            Website-adapted summary chart based on the published isolate list and tolerance
+            results reported in Jaouani et al. 2014.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-block">
+        <h3>Summary of findings</h3>
+
+        <p>
+          The study recovered <strong>21 fungal isolates</strong> representing
+          <strong>15 taxa</strong>. These isolates were assigned to multiple ascomycete
+          genera, including <em>Cladosporium</em>, <em>Alternaria</em>,
+          <em>Aspergillus</em>, <em>Penicillium</em>, and others.
+        </p>
+
+        <p>
+          Physiological screening showed broad tolerance to environmental stress. All isolates
+          tolerated oxidative stress and low temperature, nearly all were able to grow at
+          <strong>10% NaCl and pH 10</strong>, and a subset was capable of growth at
+          <strong>45°C</strong>. In addition, many isolates retained extracellular enzymatic
+          activity under saline conditions, demonstrating functional potential in hypersaline
+          habitats.
+        </p>
+
+        <p>
+          This work helped shape my long-term interest in how microorganisms adapt to
+          environmental extremes, and how stress tolerance can be studied at the intersection
+          of ecology, physiology, and diversity.
+        </p>
+
+        <div class="publication-link">
+          <a href="https://doi.org/10.1155/2014/439197" target="_blank">
+            Jaouani et al. 2014 · BioMed Research International · DOI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="red-desert">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Recent work: exploring the cultivable actinobiome of the Wyoming Red Desert</h2>
+        <p>
+          More recently, my extremophile microbiology research has focused on the discovery
+          and characterization of extremotolerant actinobacteria associated with exposed
+          lithic environments in the Wyoming Red Desert.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h3>Novel species discovery campaign</h3>
+
+        <p>
+          This research program has centered on the isolation, cultivation, phenotypic
+          characterization, genome sequencing, and taxonomic evaluation of actinobacteria
+          recovered from harsh rock-surface environments. The broader goal is not only to
+          document microbial diversity, but also to develop a robust comparative framework
+          for understanding how these organisms persist in arid, exposed, and nutrient-limited
+          systems.
+        </p>
+
+        <p>
+          The project has produced a broader collection of candidate novel taxa and has
+          generated a foundation for downstream comparative and mechanistic work. In this
+          sense, the Red Desert collection serves as both a taxonomic resource and a
+          biological system for investigating ecological fitness under stress.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Research direction:</strong> discovery and classification are the first
+          step. The longer-term goal is to understand the genomic and physiological mechanisms
+          that enable persistence under severe environmental stress.
+        </div>
+      </div>
+
+      <div class="project-block">
+        <h3>Culture collection deposition and international collaboration</h3>
+
+        <p>
+          An important component of this effort has been the formal preservation and
+          dissemination of biological material. Strains from the Red Desert collection
+          have been deposited in international culture collections, including
+          <strong>DSMZ</strong>, helping ensure that these isolates remain accessible
+          for future comparative, taxonomic, and functional work.
+        </p>
+
+        <p>
+          This culture-collection dimension strengthens the scientific value of the project
+          by transforming isolated strains into curated resources for the broader research
+          community.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h3><em>Geodermatophilus maliterrae</em> as a case study</h3>
+
+        <p>
+          A published example emerging from this work is
+          <em>Geodermatophilus maliterrae</em>, a novel member of the
+          Geodermatophilaceae recovered from badland surfaces in the Red Desert of Wyoming.
+          This species illustrates the overall logic of the project: environmental sampling,
+          cultivation, phenotypic assessment, genome sequencing, phylogenomic analysis,
+          and formal taxonomic description.
+        </p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="value">5.44 Mb</div>
+            <div class="label">Genome size</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="value">74.7%</div>
+            <div class="label">G+C content</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="value">98.4%</div>
+            <div class="label">BUSCO completeness</div>
+          </div>
+        </div>
+
+        <p>
+          Beyond formal species description, this work contributes to a broader effort to
+          identify genomic features and evolutionary patterns associated with environmental
+          resilience in extremotolerant actinobacteria.
+        </p>
+
+        <div class="publication-link">
+          <a href="https://doi.org/10.1099/ijsem.0.006603" target="_blank">
+            Ben Tekaya et al. 2024 · International Journal of Systematic and Evolutionary Microbiology · DOI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mechanism">
+    <div class="container">
+      <div class="section-heading">
+        <h2>From discovery to mechanism</h2>
+        <p>
+          The ultimate aim of this work is to move beyond cataloguing diversity and toward
+          understanding the biological mechanisms that contribute to ecological fitness in
+          extreme environments.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h3>Mechanistic direction: stress-response biology in extremotolerant bacteria</h3>
+
+        <p>
+          Species discovery and phylogenomic characterization provide the essential framework,
+          but they are not the endpoint. A major long-term objective of this research area is
+          to determine how extremotolerant microorganisms respond to stress at molecular and
+          cellular levels, and how those responses contribute to survival and persistence in
+          nature.
+        </p>
+
+        <p>
+          As an initial step in this direction, we carried out a small proteomic investigation
+          of <em>Geodermatophilus obscurus</em> G20 following UV-C exposure. This work was
+          designed as an early mechanistic study to help connect environmental tolerance
+          with measurable molecular responses.
+        </p>
+
+        <div class="highlight-box">
+          <strong>Current status:</strong> this project is in preparation. Additional details
+          will be added following publication.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Future directions</h2>
+        <p>
+          This research area continues to evolve from descriptive discovery toward comparative
+          and mechanistic analysis.
+        </p>
+      </div>
+
+      <div class="project-block">
+        <h3>Where this program is going</h3>
+
+        <ul class="future-list">
+          <li>Complete taxonomic characterization of additional Red Desert isolates.</li>
+          <li>Expand comparative genomic analyses across extremotolerant taxa.</li>
+          <li>Investigate molecular mechanisms associated with stress tolerance and ecological fitness.</li>
+          <li>Build stronger links between environmental context, organismal traits, and genome content.</li>
+          <li>Extend this framework toward broader questions in habitability, resilience, and stress biology.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 Seifeddine Ben Tekaya
+  </div>
+</footer>
+
+</body>
+</html>
