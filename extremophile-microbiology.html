@@ -352,11 +352,68 @@
       color: #52606d;
     }
 
-    .two-panel {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      margin-top: 22px;
+    .comparison-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 15px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .comparison-table th {
+      background: #eef2f6;
+      color: #17212b;
+      font-size: 0.94rem;
+    }
+
+    .comparison-table td {
+      color: #465563;
+      font-size: 0.95rem;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table td:nth-child(2) {
+      font-weight: 700;
+      color: #17212b;
+      white-space: nowrap;
+    }
+
+    .tree-card {
+      margin: 24px 0;
+      background: white;
+      border: 1px solid #e7ecf0;
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 7px 24px rgba(0,0,0,0.04);
+    }
+
+    .tree-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .tree-card p {
+      margin: 14px 0 0;
+      font-size: 0.94rem;
+      color: #52606d;
     }
 
     .future-list {
@@ -385,8 +442,7 @@
       .figure-grid,
       .metrics-grid,
       .gallery-grid,
-      .feature-layout,
-      .two-panel {
+      .feature-layout {
         grid-template-columns: 1fr;
       }
 
@@ -675,38 +731,76 @@
         <p>
           The type strain, WL48A<sup>T</sup>, was isolated from the surface of badland
           sedimentary rock, formed dry black colonies, and was deposited in major international
-          repositories including DSMZ, NCIMB, NCCB, and ATCC. The resulting publication provides
-          a concrete example of how field sampling in extreme lithic environments can lead to
-          the recovery and formal recognition of novel bacterial diversity.
+          repositories including DSMZ, NCIMB, NCCB, and ATCC. The publication provides a
+          concrete example of how field sampling in extreme lithic environments can lead to
+          the recovery and formal recognition of previously undescribed bacterial diversity.
         </p>
 
         <div class="highlight-box">
-          <strong>Why this matters:</strong> this was not simply an isolate description. It
-          established a new species, created a publicly accessible type strain resource, and
-          provided a genomic starting point for future studies on stress tolerance and ecological
-          fitness in rock-associated bacteria.
+          <strong>Why this matters:</strong> this study established a new species, created
+          a publicly accessible type-strain resource, and provided a genomic foundation for
+          studying stress tolerance and ecological fitness in rock-associated bacteria.
         </div>
 
-        <div class="two-panel">
-          <div class="figure-card">
-            <h3>Evidence for species novelty</h3>
-            <img src="gmal_species_delineation.png" alt="Graphic comparing 16S rRNA similarity, ANI, and dDDH values between Geodermatophilus maliterrae WL48A-T and Geodermatophilus bullaregiensis.">
-            <p>
-              Compared with its closest relative, <em>G. bullaregiensis</em>, strain
-              WL48A<sup>T</sup> showed 16S rRNA similarity of 98.8%, ANI of 93.3%, and
-              dDDH of 51.8%, supporting recognition as a distinct species.
-            </p>
-          </div>
+        <h4>Evidence supporting species distinction</h4>
 
-          <div class="figure-card">
-            <h3>Phylogenomic placement</h3>
-            <img src="gmal_phylogenomic_tree_tight.png" alt="Phylogenomic tree showing the placement of Geodermatophilus maliterrae WL48A-T among related Geodermatophilus type strains.">
-            <p>
-              Adapted from Ben Tekaya et al. 2024, IJSEM 74:006603 (CC BY). The phylogenomic
-              tree places WL48A<sup>T</sup> in a distinct, well-supported subclade within the
-              genus <em>Geodermatophilus</em>.
-            </p>
-          </div>
+        <p>
+          WL48A<sup>T</sup> was most closely related to
+          <em>Geodermatophilus bullaregiensis</em>, but genome-based comparisons clearly
+          supported its recognition as a distinct species.
+        </p>
+
+        <div class="comparison-table-wrap">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Comparison metric</th>
+                <th>WL48A<sup>T</sup> vs. <em>G. bullaregiensis</em></th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>16S rRNA gene similarity</td>
+                <td>98.8%</td>
+                <td>
+                  Indicates close phylogenetic relatedness, but 16S similarity alone does not
+                  establish species identity.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Average nucleotide identity (ANI)</td>
+                <td>93.3%</td>
+                <td>
+                  Below the commonly used 95–96% genomic species boundary.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Digital DNA–DNA hybridization (dDDH)</td>
+                <td>51.8%</td>
+                <td>
+                  Below the 70% threshold commonly used for prokaryotic species delineation.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tree-card">
+          <h4>Phylogenomic placement</h4>
+
+          <img src="gmal_tree_web_cropped.jpg"
+               alt="Phylogenomic tree showing the placement of strain WL48A-T among Geodermatophilus type strains.">
+
+          <p>
+            Phylogenomic placement of strain WL48A<sup>T</sup> among closely related
+            <em>Geodermatophilus</em> type strains. WL48A<sup>T</sup> forms a distinct,
+            well-supported subclade with <em>G. bullaregiensis</em>. Adapted from
+            Ben Tekaya et al. 2024, <em>International Journal of Systematic and Evolutionary Microbiology</em>
+            (CC BY).
+          </p>
         </div>
 
         <div class="metrics-grid">
@@ -727,19 +821,26 @@
         </div>
 
         <h4>Ecological and genomic highlights</h4>
+
         <p>
-          Beyond formal species description, the genome of WL48A<sup>T</sup> offers early
-          clues to potential stress-response capabilities relevant to life on exposed rock
-          surfaces. Comparative analysis highlighted genes associated with DNA repair,
-          oxidative stress, carbon starvation, osmotic stress, and metal resistance.
-          The strain also carried a distinct set of arsenic-resistance genes and showed
-          a richer secondary-metabolite biosynthetic profile than its closest relative.
+          Beyond formal species description, the genome of WL48A<sup>T</sup> provides early
+          clues to biological traits potentially relevant to persistence on exposed rock
+          surfaces. Comparative genomic analysis identified genes associated with DNA repair,
+          oxidative stress, carbon starvation, osmotic stress, and resistance to several
+          metals and toxic compounds.
         </p>
 
         <p>
-          Taken together, these features make <em>G. maliterrae</em> more than a taxonomic
-          endpoint. It serves as a model case linking field discovery, comparative genomics,
-          and broader questions about ecological fitness in extreme lithic environments.
+          WL48A<sup>T</sup> also carried a distinct set of genes associated with arsenic
+          resistance and contained nine predicted biosynthetic gene clusters, providing
+          additional avenues for investigating the ecological and metabolic capabilities
+          of this rock-associated bacterium.
+        </p>
+
+        <p>
+          Taken together, <em>G. maliterrae</em> provides a bridge between environmental
+          discovery, bacterial systematics, comparative genomics, and the broader question
+          of how microorganisms persist at exposed lithic interfaces.
         </p>
 
         <div class="publication-link">
@@ -807,11 +908,13 @@
             isolates, expanding the collection of extremotolerant bacteria associated with
             lithic environments.
           </li>
+
           <li>
             Use comparative genomics and targeted physiological studies to identify traits
             linked to ecological fitness, including persistence under desiccation, irradiation,
             nutrient limitation, and other environmental stresses.
           </li>
+
           <li>
             Develop mechanistic studies that connect environmental occurrence, organismal
             traits, and molecular responses, with the broader goal of understanding microbial
