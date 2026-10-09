@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Space Biology | Seifeddine Ben Tekaya</title>
+  <meta name="description" content="Space biology research by Seifeddine Ben Tekaya, integrating tardigrade stress biology, extremotolerant microorganisms, microbial symbiosis, habitability, and plant-microbe interactions beyond Earth." />
+
+  <style>
+    :root{
+      --ink:#1f2933;
+      --muted:#60707d;
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --line:#dde4ea;
+      --accent:#3b4f72;
+      --accent2:#6b5aa6;
+      --dark:#141c26;
+      --shadow:0 14px 34px rgba(31,41,51,.09);
+      --radius:20px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,90%);margin:0 auto}
+
+    header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(255,255,255,.96);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line)
+    }
+
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-weight:700;font-size:1.05rem;letter-spacing:.01em}
+    .nav-links{display:flex;gap:28px;list-style:none;font-size:.95rem;color:#46515c}
+
+    .hero{
+      position:relative;overflow:hidden;color:#fff;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(107,90,166,.35), transparent 24%),
+        radial-gradient(circle at 18% 78%, rgba(73,111,156,.28), transparent 28%),
+        linear-gradient(135deg,#111923 0%,#192638 52%,#1f2740 100%);
+      padding:96px 0 86px;
+      border-bottom:1px solid #263344;
+    }
+
+    .hero:after{
+      content:"";position:absolute;inset:0;
+      background-image:radial-gradient(circle, rgba(255,255,255,.7) 0 1px, transparent 1.4px);
+      background-size:48px 48px;opacity:.13;pointer-events:none;
+    }
+
+    .hero .container{position:relative;z-index:2}
+    .eyebrow{display:inline-block;margin-bottom:16px;font-size:.82rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#9fb5e7}
+    .hero h1{font-size:clamp(2.9rem,7vw,5rem);line-height:1.02;letter-spacing:-.045em;margin-bottom:24px;white-space:nowrap}
+    .hero p{max-width:930px;color:#d7e0eb;font-size:1.18rem}
+
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;font-size:.92rem;font-weight:700;border:1px solid var(--line);background:#fff}
+    .button.primary{background:#fff;color:#19212d;border-color:#fff}
+    .button.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.28)}
+
+    section{padding:74px 0}
+    .section-head{max-width:840px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:14px}
+    .section-head p{color:var(--muted);font-size:1.04rem}
+
+    .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px;align-items:stretch}
+    .story-card,.project-card,.future-card,.notice-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .story-card,.project-card{padding:34px}
+    .story-card p + p,.project-card p + p{margin-top:16px}
+
+    .bridge-card{
+      padding:30px;border-radius:var(--radius);color:#fff;
+      background:linear-gradient(135deg,rgba(56,74,112,.98),rgba(91,72,145,.98));
+      box-shadow:var(--shadow)
+    }
+
+    .bridge-card h3{font-size:1.35rem;margin-bottom:12px}
+    .bridge-card p{color:#edf0f8}
+
+    .paper-label{display:inline-block;margin-bottom:10px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2)}
+    .project-card h3{font-size:1.7rem;line-height:1.2;letter-spacing:-.02em;margin-bottom:10px}
+    .authors{color:#5f6b76;font-size:.95rem;margin-bottom:8px}
+    .status{color:#6b7783;font-size:.9rem;margin-bottom:18px}
+    .equal{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:999px;background:#f0eef8;color:#5c4b92;font-weight:700;font-size:.85rem}
+    .project-card p{color:#4f5c68;margin-top:16px}
+
+    .notice-card{margin-top:24px;padding:22px 24px;background:#f8f9fc;border-style:dashed;color:#5f6b76;font-size:.95rem}
+
+    .future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
+    .future-card{padding:28px}
+    .future-card h3{font-size:1.2rem;margin-bottom:10px}
+    .future-card p{color:#586570;font-size:.96rem}
+
+    .convergence{margin-top:28px;padding:36px;border-radius:var(--radius);color:#fff;background:var(--dark);box-shadow:var(--shadow)}
+    .convergence h2{font-size:2rem;margin-bottom:14px}
+    .convergence p{color:#d5dde5;max-width:940px}
+    .convergence strong{color:#fff}
+
+    .references{background:#fff;border-top:1px solid var(--line)}
+    .reference-list{display:grid;gap:16px;max-width:980px}
+    .reference-item{padding:18px 20px;border:1px solid var(--line);border-radius:14px;background:#fbfcfd;color:#4f5d69;font-size:.93rem}
+    .reference-item a{color:#4e5f91;font-weight:700}
+    .reference-item a:hover{text-decoration:underline}
+    .cite{font-size:.78em;vertical-align:super;font-weight:700;color:#5a5f9b;margin-left:2px}
+    .cite a{color:inherit;text-decoration:none}
+    .cite a:hover{text-decoration:underline}
+
+    footer{padding:36px 0 46px;color:#73808a;font-size:.88rem}
+
+    @media (max-width:900px){
+      .intro-grid,.future-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:800px){
+      .nav-links{display:none}
+      .hero{padding:72px 0 62px}
+      .hero h1{white-space:normal}
+      section{padding:58px 0}
+      .story-card,.project-card,.bridge-card,.future-card,.convergence{padding:26px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">Seifeddine Ben Tekaya</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#cv">CV</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Research Area</span>
+      <h1>Space Biology</h1>
+
+      <p>
+        Space biology asks an unusually fundamental question: how far can life be pushed beyond
+        the environmental conditions under which it evolved? My work approaches this question
+        through stress-tolerant biological systems, currently using the tardigrade
+        <em>Hypsibius exemplaris</em> as a model for investigating responses to spaceflight and
+        associated environmental stress. More broadly, I am interested in connecting animal
+        stress biology with extremotolerant microorganisms, microbial interactions, and questions
+        of habitability, with the longer-term goal of understanding how biological systems might
+        persist, function, and support one another beyond Earth.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#current-work">Current work</a>
+        <a class="button ghost" href="index.html#research">Back to Research</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="current-work">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow" style="color:#5a5f9b;">Current Research</span>
+        <h2>Tardigrades as a system for studying biological resilience</h2>
+        <p>
+          Tardigrades provide a compelling model for asking how complex organisms respond to
+          unusual environmental conditions, including spaceflight and other forms of physiological
+          stress. My current work in this area integrates comparative stress biology with
+          transcriptomic analysis and functional interpretation.
+        </p>
+      </div>
+
+      <article class="project-card" style="margin-bottom:28px;">
+        <span class="paper-label">Why Tardigrades?</span>
+        <h3>Exceptional resilience, from whole-organism survival to molecular protection</h3>
+
+        <p>
+          Tardigrades have become iconic models of biological resilience because some species can
+          tolerate severe dehydration, freezing, high doses of ionizing radiation, vacuum, and
+          other environmental extremes. Their relevance to space biology is not merely theoretical:
+          experiments during the FOTON-M3 mission showed that desiccated tardigrades could survive
+          direct exposure to space vacuum, with some animals also recovering after combined exposure
+          to vacuum and solar radiation.<span class="cite"><a href="#ref1">[1]</a></span>
+          Follow-up work by Rebecchi and colleagues further examined the responses of both active
+          and desiccated tardigrades flown in low Earth orbit.<span class="cite"><a href="#ref2">[2]</a></span>
+        </p>
+
+        <p>
+          Their extraordinary stress tolerance is also associated with unusual molecular adaptations.
+          Tardigrade-specific intrinsically disordered proteins, including CAHS proteins, contribute
+          to survival during severe water loss and can enhance desiccation tolerance in heterologous
+          systems.<span class="cite"><a href="#ref4">[4]</a></span>
+          Other tardigrade proteins reveal complementary strategies for coping with DNA
+          damage: Dsup can reduce radiation-associated DNA damage in cultured human cells<span class="cite"><a href="#ref3">[3]</a></span>,
+          while the more recently characterized TDR1 is strongly induced following ionizing radiation
+          and has been implicated in preserving DNA organization while repair proceeds.<span class="cite"><a href="#ref5">[5]</a></span>
+        </p>
+
+        <p>
+          Together, this combination of whole-organism resilience and distinctive molecular protection
+          makes tardigrades unusually powerful models for asking how complex biological systems respond
+          to conditions relevant to spaceflight.
+        </p>
+      </article>
+
+      <div class="intro-grid">
+
+        <div class="story-card">
+          <p>
+            Space biology is a natural extension of my broader interest in organisms that function
+            under severe environmental challenge. In <em>H. exemplaris</em>, the same questions that
+            motivate my work on terrestrial stress tolerance can be asked in the context of spaceflight:
+            how are stress-response programs reorganized, which protective mechanisms are deployed,
+            and how do those responses change across environmental contexts?
+          </p>
+
+          <p>
+            My role in this research has focused strongly on the computational and comparative side,
+            including analysis of complex transcriptomic datasets and integration of stress-response
+            patterns across experimental conditions.
+          </p>
+        </div>
+
+        <div class="bridge-card">
+          <h3>Why this fits my broader research</h3>
+          <p>
+            The same question runs through much of my work: how does life persist when conditions
+            become difficult? In one system that may mean desiccation or radiation tolerance, in
+            another it may mean host association or nutrient acquisition, and in space biology it
+            becomes a question of resilience under environments far removed from ordinary terrestrial
+            conditions.
+          </p>
+        </div>
+
+      </div>
+
+      <article class="project-card" style="margin-top:28px;">
+        <span class="paper-label">Submitted Research</span>
+
+        <h3>Tardigrade spaceflight responses confer stress-specific protection to human cells</h3>
+
+        <div class="authors">
+          Silvia Sanchez-Martinez†, Sourav Biswas†, <strong>Seifeddine Ben Tekaya†</strong>,
+          Kenny Nguyen, Chaitra Shree, Jarrod Reister, Genevieve R. Krause,
+          Travis J. Wheeler, Natalya Dvorochkin, Medaya Torres, Thomas C. Boothby*
+        </div>
+
+        <div class="status">Submitted to <em>Nature</em> · September 2026</div>
+
+        <span class="equal">† Equal contribution</span>
+
+        <p>
+          This project examines biological responses to spaceflight in the tardigrade
+          <em>Hypsibius exemplaris</em> and integrates transcriptomic analysis with downstream
+          functional investigation. Because the manuscript is currently under review, detailed
+          results are intentionally not presented here.
+        </p>
+
+        <div class="notice-card">
+          Additional experimental results, figures, and project details will be added once the
+          work becomes publicly available.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow" style="color:#5a5f9b;">Future Directions</span>
+        <h2>From stress tolerance to habitability</h2>
+        <p>
+          My longer-term goal is to connect stress biology with broader questions of how biological
+          systems might function in environments relevant to future space exploration.
+        </p>
+      </div>
+
+      <div class="future-grid">
+
+        <div class="future-card">
+          <h3>Extremotolerant microorganisms</h3>
+          <p>
+            I am interested in using stress-tolerant bacterial isolates as experimental systems
+            for understanding responses to space-relevant challenges such as radiation,
+            altered gravity, desiccation, and resource limitation.
+          </p>
+        </div>
+
+        <div class="future-card">
+          <h3>Microbial support of plant systems</h3>
+          <p>
+            A particularly exciting direction is asking whether beneficial or stress-tolerant
+            microorganisms can help plants establish and function under difficult growth conditions,
+            including lunar and Martian regolith simulants.
+          </p>
+        </div>
+
+        <div class="future-card">
+          <h3>Habitability as an interaction problem</h3>
+          <p>
+            Rather than viewing habitability only as the tolerance of an individual organism,
+            I am interested in how microbial communities and plant-microbe partnerships may help
+            create more resilient biological systems in extraterrestrial environments.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="convergence">
+        <h2>Where my research axes converge</h2>
+        <p>
+          My longer-term interest is in understanding how <strong>stress-tolerant organisms</strong>
+          and <strong>beneficial microbial interactions</strong> can contribute to biological resilience
+          beyond Earth. This creates a natural bridge between my work in
+          <strong>extremophile biology</strong>, <strong>microbial symbiosis</strong>, and
+          <strong>space biology</strong>. Across these systems, the central question is the same:
+          how can life persist, function, and interact when environmental conditions move far beyond
+          the range normally considered favorable?
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="references">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color:#5a5f9b;">Selected References</span>
+        <h2>Scientific context</h2>
+        <p>
+          Selected studies that helped establish tardigrades as models for space exposure,
+          desiccation tolerance, and radiation resilience.
+        </p>
+      </div>
+
+      <div class="reference-list">
+
+        <div class="reference-item" id="ref1">
+          <strong>[1]</strong> Jönsson KI, Rabbow E, Schill RO, Harms-Ringdahl M, Rettberg P. 2008.
+          Tardigrades survive exposure to space in low Earth orbit.
+          <em>Current Biology</em> 18:R729–R731.
+          <a href="https://doi.org/10.1016/j.cub.2008.06.048" target="_blank" rel="noopener">https://doi.org/10.1016/j.cub.2008.06.048</a>
+        </div>
+
+        <div class="reference-item" id="ref2">
+          <strong>[2]</strong> Rebecchi L, Altiero T, Guidetti R, Cesari M, Bertolani R, Negroni M, Rizzo AM. 2009.
+          Tardigrade Resistance to Space Effects: First Results of Experiments on the LIFE-TARSE Mission on FOTON-M3.
+          <em>Astrobiology</em> 9:581–591.
+          <a href="https://doi.org/10.1089/ast.2008.0305" target="_blank" rel="noopener">https://doi.org/10.1089/ast.2008.0305</a>
+        </div>
+
+        <div class="reference-item" id="ref3">
+          <strong>[3]</strong> Hashimoto T, Horikawa DD, Saito Y, et al. 2016.
+          Extremotolerant tardigrade genome and improved radiotolerance of human cultured cells by tardigrade-unique protein.
+          <em>Nature Communications</em> 7:12808.
+          <a href="https://doi.org/10.1038/ncomms12808" target="_blank" rel="noopener">https://doi.org/10.1038/ncomms12808</a>
+        </div>
+
+        <div class="reference-item" id="ref4">
+          <strong>[4]</strong> Boothby TC, Tapia H, Brozena AH, et al. 2017.
+          Tardigrades Use Intrinsically Disordered Proteins to Survive Desiccation.
+          <em>Molecular Cell</em> 65:975–984.e5.
+          <a href="https://doi.org/10.1016/j.molcel.2017.02.018" target="_blank" rel="noopener">https://doi.org/10.1016/j.molcel.2017.02.018</a>
+        </div>
+
+        <div class="reference-item" id="ref5">
+          <strong>[5]</strong> Anoud M, Delagoutte E, Helleu Q, et al. 2024.
+          Comparative transcriptomics reveal a novel tardigrade-specific DNA-binding protein induced in response to ionizing radiation.
+          <em>eLife</em> 13:RP92621.
+          <a href="https://doi.org/10.7554/eLife.92621" target="_blank" rel="noopener">https://doi.org/10.7554/eLife.92621</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© 2026 Seifeddine Ben Tekaya</div>
+</footer>
+
+</body>
+</html>
